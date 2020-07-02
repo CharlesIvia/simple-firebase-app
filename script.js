@@ -18,7 +18,8 @@ const usersRef = database.ref("/users");
 
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  usersRef.child(userId.value).set({
+  const autoId = usersRef.push().key;
+  usersRef.child(autoId).set({
     first_name: firstName.value,
     last_name: lastName.value,
     age: age.value,
