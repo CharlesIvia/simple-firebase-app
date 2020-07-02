@@ -7,3 +7,20 @@ const age = document.getElementById("age");
 const addBtn = document.getElementById("addBtn");
 const updateBtn = document.getElementById("updateBtn");
 const removeBtn = document.getElementById("removeBtn");
+
+//Instance of database
+
+const database = firebase.database();
+
+//Save data
+
+const usersRef = database.ref("/users");
+
+addBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  usersRef.child(userId.value).set({
+    first_name: firstName.value,
+    last_name: lastName.value,
+    age: age.value,
+  });
+});
