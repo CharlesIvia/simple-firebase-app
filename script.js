@@ -31,8 +31,8 @@ addBtn.addEventListener("click", (e) => {
 updateBtn.addEventListener("click", (e) => {
   e.preventDefault();
   const newData = {
-    first_name: first_name.value,
-    last_name: last_name.value,
+    first_name: firstName.value,
+    last_name: lastName.value,
     age: age.value,
   };
 
