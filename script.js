@@ -100,3 +100,12 @@ usersRef
   .on("value", (snapshot) => {
     console.log(snapshot.val());
   });
+
+//orderByChild
+
+usersRef
+  .orderByChild("age")
+  .limitToFirst(2)
+  .on("value", (snapshot) => {
+    console.log(snapshot.val());
+  });
