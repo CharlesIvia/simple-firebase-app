@@ -36,5 +36,12 @@ updateBtn.addEventListener("click", (e) => {
     age: age.value,
   };
 
-  usersRef.child(userId.value).update(newData);
+  const autoId = usersRef.push().key;
+  const updates = {};
+  updates["/users/" + autoId] = newData;
+  updates["/super-users/" + autoId] = newData;
+  //   usersRef.child(userId.value).update(newData);
+
+  database.ref().update(updates);
 });
+
