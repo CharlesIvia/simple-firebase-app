@@ -84,9 +84,19 @@ usersRef.on("value", (snapshot) => {
   console.log("An event occured!");
 });
 
-
 //Snapshop
 
-usersRef.on("child_added", snapshot => {
-    console.log(snapshot.val())
-})
+// usersRef.on("child_added", (snapshot) => {
+//   console.log(snapshot.val());
+// });
+
+//Databse queries
+
+//orderByKey
+
+usersRef
+  .orderByKey()
+  .limitToLast(2)
+  .on("value", (snapshot) => {
+    console.log(snapshot.val());
+  });
