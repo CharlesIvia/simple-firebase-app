@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Firebase App</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="userID">User ID</label>
+        <input type="text" name="userId" id="userId" />
+
+        <label for="firstName">First Name</label>
+        <input type="text" name="firstName" id="firstName" />
+
+        <label for="lastName">Last Name</label>
+        <input type="text" name="lastName" id="lastName" />
+
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" />
+
+        <button id="addBtn" class="btn waves-effect waves-light">Add</button>
+        <button id="updateBtn" class="btn waves-effect waves-light">
+          Update
+        </button>
+        <button id="removeBtn" class="btn waves-effect red darken-1">
+          Remove
+        </button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
