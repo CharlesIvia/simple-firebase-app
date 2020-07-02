@@ -54,6 +54,27 @@ removeBtn.addEventListener("click", (e) => {
     .remove()
     .then(() => alert("User Deleted"))
     .catch((error) => {
-      alert("There was an error!");
+      console.error(error);
     });
 });
+
+//Read Data in firebase realtime database
+
+//Events - child_added
+
+usersRef.on("child_added", (snapshot) => {
+  console.log("Child added!");
+});
+
+//child_changed
+
+usersRef.on("child_changed", (snapshot) => {
+  console.log("Child updated");
+});
+
+//child_removed
+
+usersRef.on("child_removed", (snapshot) => {
+  console.log("Child removed");
+});
+
