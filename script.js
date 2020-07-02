@@ -45,3 +45,15 @@ updateBtn.addEventListener("click", (e) => {
   database.ref().update(updates);
 });
 
+//Delete data
+
+removeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  usersRef
+    .child(userId.value)
+    .remove()
+    .then(() => alert("User Deleted"))
+    .catch((error) => {
+      alert("There was an error!");
+    });
+});
