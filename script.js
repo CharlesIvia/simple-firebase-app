@@ -78,3 +78,15 @@ usersRef.on("child_removed", (snapshot) => {
   console.log("Child removed");
 });
 
+//value
+
+usersRef.on("value", (snapshot) => {
+  console.log("An event occured!");
+});
+
+
+//Snapshop
+
+usersRef.on("child_added", snapshot => {
+    console.log(snapshot.val())
+})
