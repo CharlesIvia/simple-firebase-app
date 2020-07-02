@@ -25,3 +25,16 @@ addBtn.addEventListener("click", (e) => {
     age: age.value,
   });
 });
+
+//Update data
+
+updateBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const newData = {
+    first_name: first_name.value,
+    last_name: last_name.value,
+    age: age.value,
+  };
+
+  usersRef.child(userId.value).update(newData);
+});
